@@ -1,0 +1,24 @@
+<h1>Carrito de compras</h1>
+
+<table class="table text-center">
+  
+    <thead>
+        <tr>
+            <th></th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+        </tr>
+    </thead>
+
+    <tbody>
+       
+        <tr *ngFor="let product of cartList$ | async">
+            <td><img width="100" class="img-thumbnail" [src]="product.imagen" [alt]="product.imagen"></td>
+            <td>{{product.nombre}}</td>
+            <td>{{product.precio | currency}}</td>  
+            <td>{{product.cantidad}}</td>    
+            
+        </tr>
+    </tbody>
+</table>

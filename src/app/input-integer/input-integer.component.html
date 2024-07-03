@@ -1,0 +1,8 @@
+<div class="d-flex align-items-center">
+    <button class="btn btn-primary btn-sm me-2" (click)="decrementarCantidad()">-</button>
+    <input class="form-control form-control-sm text-center" type="number" 
+           [(ngModel)]="cantidad"
+           (ngModelChange)="cambiarCantidad($event)" 
+           min="0">
+    <button class="btn btn-primary btn-sm ms-2" (click)="aumentarCantidad()">+</button>
+    </div>
